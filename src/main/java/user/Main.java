@@ -52,10 +52,10 @@ public class Main {
                     .dob(LocalDate.parse("1920-01-26"))
                     .enabled(false)
                     .build();
-            user1.setId(dao.insert(user1));
-            user2.setId(dao.insert(user2));
-            user3.setId(dao.insert(user3));
-            user4.setId(dao.insert(user4));
+            dao.insert(user1);
+            dao.insert(user2);
+            dao.insert(user3);
+            dao.insert(user4);
 
             dao.list().stream().forEach(System.out::println);
 
